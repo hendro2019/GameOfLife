@@ -1,5 +1,5 @@
 # GameOfLife
-The Game of Life is a zero player game, that is to say that the entire evolution of the game is determined by the boards initial state. The rules for the development of each generation of the game state whee developed by mathematician John Conway and are as follows:
+The Game of Life is a zero player game, which is to say that the entire evolution of the game is determined by the boards initial state. The rules for the development of each generation of the game state whee developed by mathematician John Conway and are as follows:
 
     1. Any live cell with two or three live neighbors survives. 
     2. Any dead cell with three live neighbors becomes a live cell. 
@@ -7,6 +7,8 @@ The Game of Life is a zero player game, that is to say that the entire evolution
 This repo contains an OO implementation of the life algorithm where each square on the grid is represented as a cell object. The program also makes use of SFML to display the visualization in a graphical user interface.
 
 ![](images/conway.gif)
+
+## How to play
 - draw game state with your mouse
 - run an iteration of the Game of Life by pressing the spacebar
 - pause an iteration of the Game of Life by pressing the spacebar again

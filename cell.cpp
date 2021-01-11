@@ -26,8 +26,8 @@ void Cell::setPosition(sf::Vector2f pos) {
 }
 
 void Cell::kill() {
-    this->alive = true;
-    this->shape.setFillColor(sf::Color::Black);
+    this->alive = false;
+    this->shape.setFillColor(sf::Color::Cyan);
 }
 
 void Cell::born() {

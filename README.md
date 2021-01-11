@@ -4,7 +4,7 @@ The Game of Life is a zero player game, which is to say that the entire evolutio
     1. Any live cell with two or three live neighbors survives. 
     2. Any dead cell with three live neighbors becomes a live cell. 
     3. All other live cells die in the next generation. Similarly, all other dead cells stay dead.
-This repo contains an OO implementation of the life algorithm where each square on the grid is represented as a cell object. The program also makes use of SFML to display the visualization in a graphical user interface.
+This repo contains an OO implementation of the life where each square on the grid is represented as a cell object. The program also makes use of SFML to display the game visualization in a graphical user interface.
 
 ![](images/conway.gif)
 

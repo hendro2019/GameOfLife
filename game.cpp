@@ -44,12 +44,12 @@ int Game::getLivingNeighbors(int x, int y) {
   // check neighbor to the lower right corner
   if (y < GRID_SIZE - 1   &&  x > 0  &&  grid[(y + 1) * GRID_SIZE + x - 1].isAlive()) 
     livingNeighbors++;
-
   // check neighbor to the upper left corner
   if (y > 0  &&  x < GRID_SIZE - 1 &&  grid[(y - 1) * GRID_SIZE + x + 1].isAlive()) 
     livingNeighbors++;
   // check neighbor to the lower left corner
-  if (y > 0 &&  x > 0 &&  grid[(y - 1) * GRID_SIZE + x - 1].isAlive()) livingNeighbors++;
+  if (y > 0 &&  x > 0 &&  grid[(y - 1) * GRID_SIZE + x - 1].isAlive()) 
+    livingNeighbors++;
 
   return livingNeighbors;
 }
@@ -73,7 +73,7 @@ void Game::run() {
       else if (event.type = sf::Event::KeyPressed) {
         if (event.key.code == sf::Keyboard::Space) {
           if (elapsedStart.asSeconds() >= 2) {
-            std::cout << "Apasat\n";
+            //std::cout << "Apasat\n";
             isRunning = !isRunning;
             clockStart.restart();
           }
@@ -87,7 +87,7 @@ void Game::run() {
     }
     if (isRunning) {
       vectorCopy(grid, gridCopy);
-      std::cout << "DA";
+      //std::cout << "DA";
       for (int i = 0; i < grid.size(); i++) {
         int nb = getLivingNeighbors(grid[i].getY(), grid[i].getX());
         bool lives = gridCopy[i].isAlive();

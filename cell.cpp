@@ -10,6 +10,7 @@ Cell::Cell(int i, int j, int w) {
     this->x = i;
     this->y = j;
     this->cellSize = w;
+    this->shape.setFillColor(sf::Color::Blue);
 }
 
 Cell::~Cell() {}
@@ -27,7 +28,7 @@ void Cell::setPosition(sf::Vector2f pos) {
 
 void Cell::kill() {
     this->alive = false;
-    this->shape.setFillColor(sf::Color::Cyan);
+    this->shape.setFillColor(sf::Color::Blue);
 }
 
 void Cell::born() {

@@ -26,14 +26,30 @@ Game::~Game() {}
 
 int Game::getLivingNeighbors(int x, int y) {
   int livingNeighbors = 0;
-  if (x < GRID_SIZE - 1                                  &&  grid[y * GRID_SIZE + x + 1].isAlive()) livingNeighbors++;
-  if (x > 0                                              &&  grid[y * GRID_SIZE + x - 1].isAlive()) livingNeighbors++;
-  if (y < GRID_SIZE - 1                                  &&  grid[(y + 1) * GRID_SIZE + x].isAlive()) livingNeighbors++;
-  if (y > 0                                              &&  grid[(y - 1) * GRID_SIZE + x].isAlive()) livingNeighbors++;
-  if (y < GRID_SIZE - 1   &&  x < GRID_SIZE - 1          &&  grid[(y + 1) * GRID_SIZE + x + 1].isAlive()) livingNeighbors++;
-  if (y < GRID_SIZE - 1   &&  x > 0                      &&  grid[(y + 1) * GRID_SIZE + x - 1].isAlive()) livingNeighbors++;
-  if (y > 0               &&  x < GRID_SIZE - 1          &&  grid[(y - 1) * GRID_SIZE + x + 1].isAlive()) livingNeighbors++;
-  if (y > 0               &&  x > 0                      &&  grid[(y - 1) * GRID_SIZE + x - 1].isAlive()) livingNeighbors++;
+  // check neighbor above
+  if (x < GRID_SIZE - 1 &&  grid[y * GRID_SIZE + x + 1].isAlive())
+    livingNeighbors++;
+  // check neighbor below
+  if (x > 0 &&  grid[y * GRID_SIZE + x - 1].isAlive())
+    livingNeighbors++;
+  // check neighbor to the right
+  if (y < GRID_SIZE - 1 &&  grid[(y + 1) * GRID_SIZE + x].isAlive())
+    livingNeighbors++;
+  // check neighbor to the left
+  if (y > 0  &&  grid[(y - 1) * GRID_SIZE + x].isAlive())
+    livingNeighbors++;
+  // check neighbor to the upper right corner
+  if (y < GRID_SIZE - 1   &&  x < GRID_SIZE - 1  &&  grid[(y + 1) * GRID_SIZE + x + 1].isAlive()) 
+    livingNeighbors++;
+  // check neighbor to the lower right corner
+  if (y < GRID_SIZE - 1   &&  x > 0  &&  grid[(y + 1) * GRID_SIZE + x - 1].isAlive()) 
+    livingNeighbors++;
+
+  // check neighbor to the upper left corner
+  if (y > 0  &&  x < GRID_SIZE - 1 &&  grid[(y - 1) * GRID_SIZE + x + 1].isAlive()) 
+    livingNeighbors++;
+  // check neighbor to the lower left corner
+  if (y > 0 &&  x > 0 &&  grid[(y - 1) * GRID_SIZE + x - 1].isAlive()) livingNeighbors++;
 
   return livingNeighbors;
 }

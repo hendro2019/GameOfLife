@@ -1,5 +1,5 @@
 # GameOfLife
-The Game of Life is a zero player game, which is to say that the entire evolution of the game is determined by the boards initial state. The rules for the development of each generation of the game state whee developed by mathematician John Conway and are as follows:
+The Game of Life is a zero player game, which is to say that the entire evolution of the game is determined by the boards initial state. The rules for the development of each generation of the game state were developed by mathematician John Conway and are as follows:
 
     1. Any live cell with two or three live neighbors survives. 
     2. Any dead cell with three live neighbors becomes a live cell. 

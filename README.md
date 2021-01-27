@@ -6,7 +6,7 @@ The Game of Life is a zero player game, which is to say that the entire evolutio
     3. All other live cells die in the next generation. Similarly, all other dead cells stay dead.
 This repo contains an OO implementation of the game of life, where each square on the grid is represented as a cell object. The program also makes use of SFML to display the game visualization in a graphical user interface.
 
-![](images/conway.gif)
+![](images/conway.gif = 250x250)
 
 ## How to play
 - draw game state with your mouse
